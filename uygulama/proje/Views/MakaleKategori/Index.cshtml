@@ -1,0 +1,33 @@
+﻿@model IEnumerable<proje.Models.kategori>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            no
+        </th>
+
+        <th>ad</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+     
+        <td>
+            @item.Kno
+        </td>
+      
+        <td>
+            @item.ad
+        </td>
+    </tr>
+}
+
+</table>

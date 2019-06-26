@@ -1,0 +1,52 @@
+﻿
+@model List<proje.Models.makale>
+@{
+    ViewBag.Title = "MakaleSorgula";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Makale liste</h2>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <table>
+
+
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>sehir</th>
+                    <th>plaka</th>
+                    <th>marka</th>
+
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+
+                @foreach (var makale in Model)
+            {
+                    <tr>
+                        <td>@makale.Mno</td>
+                        <td>@makale.baslik</td>
+                        <td>@makale.yazildigitarih</td>
+                        <td>@makale.metin</td>
+
+
+
+                    </tr>
+
+                }
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+
+</div>

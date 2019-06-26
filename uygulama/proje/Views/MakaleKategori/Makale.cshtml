@@ -1,0 +1,27 @@
+﻿@model  proje.Models.makale
+@{
+    ViewBag.Title = "Makale";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div style="margin-left:40px">
+        @{
+
+            foreach (var makale in ViewBag.Data)
+            {
+                <table>
+                    <tr>
+                        <td>@makale.Mno</td>
+                        <td>@makale.baslik</td>
+                        <td>@makale.yazildigitarih</td>
+                        <td>@makale.metin</td>
+
+
+
+                    </tr>
+                </table>
+
+            }
+        }
+    </div>
